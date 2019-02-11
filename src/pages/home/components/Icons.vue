@@ -40,7 +40,7 @@ export default {
       },{
         id: '0005',
         imgUrl: '../../../../static/校园荣誉.svg',
-        desc: '荣誉墙'
+        desc: '资料墙'
       },{
         id: '0006',
         imgUrl: '../../../../static/校园演出.svg',
@@ -74,14 +74,15 @@ export default {
     }
   }
 }
-
 </script>
 
 <style lang="stylus" scoped>
 @import '~styles/varibles.styl'
-    .icons >>> .swiper-container
-      height : 0
-      padding-bottom : 50%
+  .icons >>> .swiper-container
+    height : 0
+    padding-bottom : 50%
+  .icons
+    margin-top : .1rem
     .icon
       position: relative
       overflow: hidden
