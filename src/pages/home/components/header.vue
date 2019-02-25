@@ -6,9 +6,10 @@
     </div>
     <div class="header-input">
       <span class="iconfont">&#xe632;</span>
+      <input type="text"/>
       输入需求
     </div>
-    <div class="header-right">分类
+    <div class="header-right">{{this.city}}
       <span class="iconfont arow-icon">&#xe64a;</span>
     </div>
   </div>
@@ -16,7 +17,10 @@
 
 <script>
 export default {
-  name: 'HomeHeader'
+  name: 'HomeHeader',
+  props: {
+    city: String
+  }
 }
 </script>
 
@@ -47,6 +51,7 @@ export default {
       width: 1.24rem
       float right
       text-align : center
+      color : #ffffff
       .arow-icon
         margin-left : -0.04rem
         font-size: .24rem

@@ -1,8 +1,8 @@
 <template>
-<div class="wrapper">
+<div class="wrapper" v-if="showSwiper">
   <swiper :options="swiperOption">
     <!-- slides -->
-    <swiper-slide v-for="item of swiperList" :key="item.id">
+    <swiper-slide v-for="item of list" :key="item.id">
       <img class="swiper-img" :src="item.imgUrl"/>
     </swiper-slide>
     <!-- Optional controls -->
@@ -14,19 +14,20 @@
 <script>
 export default {
   name: 'HomeSwiper',
+  props : {
+    list: Array
+  },
   data () {
     return {
       swiperOption: {
         loop: true,
         pagination: '.swiper-pagination',
-      },
-      swiperList: [{
-        id: '0001',
-        imgUrl: 'http://www.pptok.com/wp-content/uploads/2012/08/xunguang-4.jpg',
-      },{
-        id: '0002',
-        imgUrl: 'http://www.pptbz.com/pptpic/UploadFiles_6909/201203/2012031220134655.jpg'
-      }]
+      }
+    }
+  },
+  computed: {
+    showSwiper() {
+      return this.list.length
     }
   }
 }

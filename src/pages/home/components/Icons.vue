@@ -3,10 +3,12 @@
     <swiper :options="swiperOption">
       <swiper-slide v-for="(page, index) of pages" :key="index">
         <div class="icon" v-for="item of page" :key="item.id">
-          <dir class="icon-img">
-            <img class="icon-imgcontent" :src="item.imgUrl"> 
-          </dir>
-            <p class="icon-desc">{{item.desc}}</p>
+          <router-link to="/data">
+            <dir class="icon-img">
+              <img class="icon-imgcontent" :src="item.imgUrl"> 
+            </dir>
+              <p class="icon-desc">{{item.desc}}</p>
+          </router-link>
         </div>
       </swiper-slide>
     </swiper>
@@ -16,54 +18,21 @@
 <script>
 export default {
   name: 'HomeIcons',
+  props: {
+    list: Array
+  },
   data () {
     return {
       swiperOption: {
-        loop: true,
-      },
-      iconList: [{
-        id: '0001',
-        imgUrl: '../../../../static/校园签到.png',
-        desc: '签到'
-      },{
-        id: '0002',
-        imgUrl: '../../../../static/校园公告.svg',
-        desc: '公告'
-      },{
-        id: '0003',
-        imgUrl: '../../../../static/校园兼职.svg',
-        desc: '校园商店'
-      },{
-        id: '0004',
-        imgUrl: '../../../../static/校园答题.svg',
-        desc: '答题互助'
-      },{
-        id: '0005',
-        imgUrl: '../../../../static/校园荣誉.svg',
-        desc: '荣誉墙'
-      },{
-        id: '0006',
-        imgUrl: '../../../../static/校园演出.svg',
-        desc: '演出活动'
-      },{
-        id: '0007',
-        imgUrl: '../../../../static/校园新闻、通知公告.svg',
-        desc: '学校通知'
-      },{
-        id: '0008',
-        imgUrl: '../../../../static/校园投票.svg',
-        desc: '投票'
-      },{
-        id: '0009',
-        imgUrl: '../../../../static/校园抽奖.svg',
-        desc: '抽奖'
-      }]
+      //循环
+      loop:true,
+      }
     }
   },
   computed : {
     pages () {
         const pages = []
-        this.iconList.forEach((item, index) => {
+        this.list.forEach((item, index) => {
           const page = Math.floor(index/8)
           if(!pages[page]){
             pages[page] = []
@@ -74,14 +43,15 @@ export default {
     }
   }
 }
-
 </script>
 
 <style lang="stylus" scoped>
 @import '~styles/varibles.styl'
-    .icons >>> .swiper-container
-      height : 0
-      padding-bottom : 50%
+  .icons >>> .swiper-container
+    height : 0
+    padding-bottom : 50%
+  .icons
+    margin-top : .1rem
     .icon
       position: relative
       overflow: hidden
