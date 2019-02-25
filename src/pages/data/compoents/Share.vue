@@ -1,13 +1,13 @@
 <template>
   <div>
-    <div class="recommend-title">推荐</div>
+    <div class="recommend-title">下载</div>
     <ul>
-      <li class="item" v-for="item of this.recommendList" :key="item.id">
+      <li class="item" v-for="item of recommendList" :key="item.id">
           <img class="item-img" :src="item.imgUrl">
           <div class="item-info">
             <p class="item-title">{{item.title}}</p>
             <p class="item-desc">{{item.desc}}</p>
-            <button class="item-button">查看详情</button>
+            <a :href="item.imgUrl" :download="item.id"><button class="item-button">点击下载</button></a>
           </div>
       </li>
     </ul>
@@ -16,10 +16,25 @@
 
 <script>
 export default {
-  name : 'HomeRecommend',
-  props:{
+  name : 'DataShare',
+  props: {
     recommendList: Array
   },
+  data () {
+    return {
+      recommendList: [{
+        "id":"0001",
+        "imgUrl": "../../../../static/校园抽奖.svg",
+        "title":"抽连大锦鲤",
+        "desc":"这些都是演示demo"
+      },{
+        "id":"0002",
+        "imgUrl": "../../../../static/校园演出.svg",
+        "title":"演出活动通知",
+        "desc":"2222222222222333333333"
+      }]
+    }
+  }
 
 }
 </script>
@@ -27,7 +42,7 @@ export default {
 <style lang="stylus" scoped>
 @import '~styles/mixins.styl'
   .recommend-title
-    margin-top : .2rem
+    margin-top : .001rem
     line-height : .8rem
     background : #eeeeee
     text-indent: .2rem

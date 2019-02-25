@@ -1,0 +1,87 @@
+{
+  "ret": true,
+  "data": {
+    "swiperList": [{
+        "id": "0001",
+        "imgUrl": "http://www.pptok.com/wp-content/uploads/2012/08/xunguang-4.jpg"
+      },{
+        "id": "0002",
+        "imgUrl": "http://www.pptbz.com/pptpic/UploadFiles_6909/201203/2012031220134655.jpg"
+      }],
+    "iconList": [{
+        "id": "0001",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1611/54/ace00878a52d9702.png",
+        "desc": "签到(get!)"
+      },{
+        "id": "0002",
+        "imgUrl": "../../static/校园.svg",
+        "desc": "公告"
+      },{
+        "id": "0003",
+        "imgUrl": "../../static/校园兼职.svg",
+        "desc": "校园商店"
+      },{
+        "id": "0004",
+        "imgUrl": "../../static/校园答题.svg",
+        "desc": "答题互助"
+      },{
+        "id": "0005",
+        "imgUrl": "../../static/校园荣誉.svg",
+        "desc": "资料墙"
+      },{
+        "id": "0006",
+        "imgUrl": "../../static/校园演出.svg",
+        "desc": "演出活动"
+      },{
+        "id": "0007",
+        "imgUrl": "../../static/校园新闻、通知公告.svg",
+        "desc": "学校通知"
+      },{
+        "id": "0008",
+        "imgUrl": "../../static/校园投票.svg",
+        "desc": "投票"
+      }],
+    "recommendList": [{
+        "id":"0001",
+        "imgUrl": "../../../../static/校园抽奖.svg",
+        "title":"抽连大锦鲤",
+        "desc":"这些都是演示demo"
+      },{
+        "id":"0002",
+        "imgUrl": "../../../../static/校园演出.svg",
+        "title":"演出活动通知",
+        "desc":"2222222222222333333333"
+      },{
+        "id":"0003",
+        "imgUrl": "../../../../static/校园兼职.svg",
+        "title":"校园商店",
+        "desc":"333333333333333333333333333333"
+      },{
+        "id":"0004",
+        "imgUrl": "../../../../static/校园抽奖.svg",
+        "title":"抽连大锦鲤",
+        "desc":""
+      }],
+    "weekendList": [{
+        "id":"0001",
+        "imgUrl": "../../../../static/校园抽奖.svg",
+        "title":"抽连大锦鲤",
+        "desc":"11111111111"
+      },{
+        "id":"0002",
+        "imgUrl": "../../../../static/校园演出.svg",
+        "title":"演出活动通知",
+        "desc":"2222222222222333333333"
+      },{
+        "id":"0003",
+        "imgUrl": "../../../../static/校园兼职.svg",
+        "title":"校园商店",
+        "desc":"333333333333333333333333333333"
+      },{
+        "id":"0004",
+        "imgUrl": "../../../../static/校园抽奖.svg",
+        "title":"抽连大锦鲤",
+        "desc":""
+      }]
+  }
+}

@@ -2,7 +2,7 @@
   <div>
     <div class="recommend-title">周末去哪</div>
     <ul>
-      <li class="item" v-for="item of recommendList" :key="item.id">
+      <li class="item" v-for="item of weekendList" :key="item.id">
         <div class="item-img-wrapper">
           <img class="item-img" :src="item.imgUrl">
         </div>
@@ -20,10 +20,10 @@ export default {
   name : 'HomeWeekend',
   data () {
     return {
-      recommendList: [{
+      weekendList: [{
         id:'0001',
         imgUrl: '../../../../static/校园抽奖.svg',
-        title:'抽连大锦鲤',
+        title:'这是第一个demo',
         desc:'11111111111'
       },{
         id:'0002',
@@ -49,7 +49,6 @@ export default {
 <style lang="stylus" scoped>
 @import '~styles/mixins.styl'
   .recommend-title
-    margin-top : .2rem
     line-height : .8rem
     background : #eeeeee
     text-indent: .2rem
