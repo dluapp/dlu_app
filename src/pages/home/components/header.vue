@@ -7,7 +7,7 @@
     <div class="header-input">
       <span class="iconfont">&#xe632;</span>
       <input type="text"/>
-      输入需求
+      输入
     </div>
     <div class="header-right">{{this.city}}
       <span class="iconfont arow-icon">&#xe64a;</span>
